@@ -145,8 +145,8 @@ print("average temperature in germany", avg_temp_germany)
 italy_cities = [city for city in cities if city["country"] == "Italy"]
 avg_temp_Italy = aggregate(
     "temperature", 
-    lambda temp: sum(temp) / len(temp), 
+    max, 
     italy_cities
 )
-print("average temperature in Italy", avg_temp_Italy)
+print("Max temperature in Italy", avg_temp_Italy)
 
